@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Composition vs Inheritance</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: var(--lumo-space-m);
+      }
+
+      main {
+        display: flex;
+        flex-flow: column;
+        max-width: 200px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import '@vaadin/text-field';
+      import '../dist/src/inheritance/search-field.js';
+      import '../dist/src/composition/url-field.js';
+    </script>
+    <main>
+      <search-field label="Search Field | Inheritance"></search-field>
+      <url-field label="URL Field | Composition"></url-field>
+      <vaadin-text-field label="Text Field | Base Class"></vaadin-text-field>
+    </main>
+  </body>
+</html>
