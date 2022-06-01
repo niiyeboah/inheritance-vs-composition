@@ -21,7 +21,7 @@ export class UrlField extends LitElement {
   @property({ type: Number, attribute: 'max-length' }) maxlength?: number;
   @property({ type: Number, attribute: 'min-length' }) minlength?: number;
   @property({ type: String, attribute: true }) name = '';
-  @property({ type: String, attribute: true }) pattern = '[-a-zA-Z0-9@:%._+~#=]{1,256}.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)';
+  @property({ type: String, attribute: true }) pattern = '^((https?|ftp|smtp)://)?(www.)?[a-z0-9]+.[a-z]+(/[a-zA-Z0-9#]+/?)*$';
   @property({ type: String, attribute: true }) placeholder = '';
   @property({ type: Boolean, attribute: 'prevent-invalid-input' }) preventInvalidInput?: boolean;
   @property({ type: Boolean, attribute: true }) readonly = false;
